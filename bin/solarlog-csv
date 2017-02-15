@@ -3,7 +3,7 @@
 import os
 import sys
 
-import solarlogcsv
+from solarlogcsv.parser import parsefile
 
 try:
     try:
@@ -16,7 +16,7 @@ try:
     for filename in listing:
         if (filename.startswith("min") and filename.endswith(".js")):
             print("Parsing file: ", filename)
-            solarlogcsv.parsefile(os.path.join(folderpath,filename), timezone)
+            parsefile(os.path.join(folderpath,filename), timezone)
 except Exception:
     print("Something went wrong ...")
     print ("Usage: solarlog-csv path/to/minjsfiles [timezone]")
