@@ -22,8 +22,8 @@ The csv-files generated are structured per inverter per year. A UNIX-timestamp c
 
         solarlog-csv ./path/to/solarlog-download 'Europe/Brussels'
 
-*note: Because the timestamps provided by Solar-Log are local you should make sure to also provide your timezone for the conversion to UNIX-timestamp to work correctly
-(supported timezones in TZ collumn of [Wikipedia table of timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))*
+  *note: Because the timestamps provided by Solar-Log are local you should make sure to also provide your timezone for the conversion to UNIX-timestamp to work correctly
+  (supported timezones in TZ collumn of [Wikipedia table of timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))*
 
 ## Example data
 An example of a min.js file can be found here: [min120515.js](https://github.com/MikiDi/solarlog-csv/blob/master/example/min120515.js)
