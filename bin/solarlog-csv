@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+import solarlog-csv
+
+try:
+    try:
+        folderpath = sys.argv[1]
+        timezone = sys.argv[2]
+    except IndexError:
+        folderpath = sys.argv[1]
+        timezone = "Europe/Brussels"
+    listing = sorted(os.listdir(folderpath))
+    for filename in listing:
+        if (filename.startswith("min") and filename.endswith(".js")):
+            print("Parsing file: ", filename)
+            solarlog-csv.parsefile(os.path.join(folderpath,filename), timezone)
+except Exception:
+    print("Something went wrong ...")
+    print ("Usage: solarlog-csv path/to/minjsfiles [timezone]")
