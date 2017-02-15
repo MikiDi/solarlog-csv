@@ -19,4 +19,4 @@ try:
             parsefile(os.path.join(folderpath,filename), timezone)
 except Exception:
     print("Something went wrong ...")
-    print ("Usage: solarlog-csv path/to/minjsfiles [timezone]")
+    print("Usage: solarlog-csv path/to/minjsfiles [timezone]")
